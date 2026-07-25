@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>ง้อหนูนะ 🥺</title>
+
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background: #f6f2af;
+
+    font-family:
+        Arial,
+        "Tahoma",
+        sans-serif;
+
+    color: #542f31;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decor {
+
+    position: fixed;
+
+    font-size: 28px;
+
+    pointer-events: none;
+
+    opacity: 0.8;
+
+}
+
+.decor.one {
+
+    top: 8%;
+
+    left: 8%;
+
+    transform:
+        rotate(-15deg);
+
+}
+
+.decor.two {
+
+    top: 12%;
+
+    right: 8%;
+
+    transform:
+        rotate(15deg);
+
+}
+
+.decor.three {
+
+    bottom: 8%;
+
+    left: 10%;
+
+    transform:
+        rotate(10deg);
+
+}
+
+.decor.four {
+
+    bottom: 10%;
+
+    right: 8%;
+
+    transform:
+        rotate(-10deg);
+
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    padding:
+        35px
+        25px
+        30px;
+
+    background: #fffdf0;
+
+    border:
+        5px solid
+        #7b3933;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        8px 8px 0
+        #7b3933;
+
+    position: relative;
+
+}
+
+
+/* =========================
+   POMPOM STYLE
+========================= */
+
+.pompom {
+
+    font-size: 65px;
+
+    margin-bottom: 5px;
+
+    animation:
+        bounce
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    margin:
+        5px
+        0
+        12px;
+
+    color: #7f292c;
+
+    font-size: 32px;
+
+}
+
+
+.subtitle {
+
+    color: #7b3933;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.main-image {
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    min-height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding:
+        15px
+        20px;
+
+    margin-bottom: 20px;
+
+    background: #f6f2af;
+
+    border-radius: 25px;
+
+    color: #542f31;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding:
+        14px
+        25px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform
+        0.2s,
+
+        box-shadow
+        0.2s;
+
+}
+
+
+/* YES BUTTON */
+
+#yesButton {
+
+    background: #ee8484;
+
+    color: white;
+
+    box-shadow:
+        4px 4px 0
+        #7f292c;
+
+}
+
+
+#yesButton:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        4px 7px 0
+        #7f292c;
+
+}
+
+
+/* NO BUTTON */
+
+#noButton {
+
+    background: #f6f2af;
+
+    color: #7b3933;
+
+    border:
+        3px solid
+        #7b3933;
+
+}
+
+
+#noButton:hover {
+
+    transform:
+        translateY(-3px);
+
+    background: #fff4c7;
+
+}
+
+
+/* =========================
+   SUCCESS PAGE
+========================= */
+
+#successPage {
+
+    display: none;
+
+}
+
+
+.success-title {
+
+    color: #7f292c;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.success-message {
+
+    padding:
+        20px;
+
+    background: #f6f2af;
+
+    border-radius: 25px;
+
+    color: #542f31;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation:
+        floatUp
+        4s
+        linear
+        forwards;
+
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+    max-width: 500px
+) {
+
+    .card {
+
+        padding:
+            30px
+            20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .main-image {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+    .message {
+
+        font-size: 16px;
+
+    }
+
+
+    button {
+
+        font-size: 15px;
+
+        padding:
+            12px
+            20px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     DECORATION
+========================= -->
+
+<div class="decor one">
+    🌼
+</div>
+
+<div class="decor two">
+    🧸
+</div>
+
+<div class="decor three">
+    ⭐
+</div>
+
+<div class="decor four">
+    🌼
+</div>
+
+
+
+<!-- =========================
+     QUESTION PAGE
+========================= -->
+
+<div
+    class="card"
+    id="questionPage"
+>
+
+
+    <div class="pompom">
+        🧸
+    </div>
+
+
+    <h1>
+        ง้อหนูนะ 🥺
+    </h1>
+
+
+    <div class="subtitle">
+
+        พี่รู้ว่าหนูยังงอนอยู่<br>
+
+        แต่พี่อยากง้อหนูจริง ๆ นะ
+
+    </div>
+
+
+    <!-- รูปตอนงอน -->
+
+    <img
+        id="mainImage"
+        class="main-image"
+        src="sad.png"
+        alt="ง้อหนู"
+    >
+
+
+    <div
+        class="message"
+        id="message"
+    >
+
+        หนู หายงอนพี่ได้ยังอะ<br>
+
+        พี่รู้ว่าพี่ผิดนะ แต่พี่ไม่รู้จะง้อยังไงแล้ว 😭
+
+    </div>
+
+
+
+    <div class="buttons">
+
+
+        <button
+            id="yesButton"
+            onclick="forgive()"
+        >
+
+            หายงอนแล้ว 💗
+
+        </button>
+
+
+        <button
+            id="noButton"
+            onclick="stillMad()"
+        >
+
+            ยังไม่หาย 😾
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     SUCCESS PAGE
+========================= -->
+
+<div
+    class="card"
+    id="successPage"
+>
+
+
+    <div class="pompom">
+        🎉
+    </div>
+
+
+    <div class="success-title">
+
+        เย้ หายงอนแล้ววว ◌ิ ◌ิ
+
+    </div>
+
+
+    <!-- รูปตอนหายงอน -->
+
+    <img
+        class="main-image"
+        src="yes.png"
+        alt="ดีใจ"
+    >
+
+
+    <div class="success-message">
+
+        ขอบคุณนะคะที่ยอมใจอ่อนให้พี่ 🥺<br>
+
+        พี่ดีใจจริง ๆ ที่หนูหายงอนแล้ว<br>
+
+        คราวนี้เรากลับมาคุยกันดี ๆ นะ<br><br>
+
+        พี่รักหนูนะคะ 💗
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   คำง้อ
+========================= */
+
+const sorryMessages = [
+
+    `หนู หายงอนพี่ได้ยังอะ<br>
+    พี่รู้ว่าพี่ผิดนะ แต่พี่ไม่รู้จะง้อยังไงแล้ว t t`,
+
+
+
+    `โอเค... พี่ยอมรับว่าหนูยังงอนอยู่<br>
+    พี่เห็นจากปุ่มแล้ว`,
+
+
+
+    `หนูยังไม่หายจริง ๆ เหรอ<br>
+    พี่ขอโทษแล้วนะ `,
+
+
+
+    `เอาจริงพี่ก็รู้ว่าหนูยังไม่หาย<br>
+    แต่พี่ไม่รู้จะทำไงแล้วอะ`,
+
+
+
+    `พี่ขอแก้ตัวได้ปะ<br>
+    พี่ไม่อยากให้หนูโกรธพี่นานเลย`,
+
+
+
+    `โอเค พี่ผิดเอง<br>
+    หนูอย่าเพิ่งใจแข็งกับพี่มากได้ไหม`,
+
+
+
+    `หนูยังงอนพี่อยู่จริงดิ...<br>
+    พี่เริ่มรู้สึกผิดจริง ๆ แล้วนะ`,
+
+
+
+    `พี่รู้นะว่าพูดขอโทษอย่างเดียวมันไม่พอ<br>
+    แต่พี่ไม่รู้จะเริ่มจากตรงไหน`,
+
+
+
+    `งั้นพี่ขอโทษอีกรอบ<br>
+    แบบจริงจังเลย พี่ขอโทษนะ`,
+
+
+
+    `พี่ไม่อยากทะเลาะกับหนูแล้วอะ<br>
+    กลับมาคุยกันดี ๆ ได้ไหม`,
+
+
+
+    `หนูจะงอนพี่อีกนานแค่ไหนอะ<br>
+    พี่คิดถึงตอนที่เราคุยกันดี ๆ แล้วนะ`,
+
+
+
+    `โอเค ๆ พี่ยอมแพ้แล้ว<br>
+    หนูชนะ พี่ผิดเองทุกอย่างเลย tt `,
+
+
+
+    `หนูช่วยใจอ่อนให้พี่หน่อยได้ไหม<br>
+    พี่ง้อจนไม่รู้จะพูดอะไรแล้ว`,
+
+
+
+    `พี่ไม่ได้อยากชนะนะ<br>
+    พี่แค่อยากให้หนูหายโกรธ`,
+
+
+
+    `ถ้าพี่ย้อนเวลากลับไปได้<br>
+    พี่จะไม่ทำแบบนั้นจริง ๆ นะ`,
+
+
+
+    `พี่รู้ว่าหนูเสียใจ<br>
+    พี่ก็เสียใจที่ทำให้หนูเป็นแบบนั้นเหมือนกัน`,
+
+
+
+    `ขอโทษนะหนู<br>
+    พี่อาจจะทำได้ไม่ดี แต่พี่ไม่ได้อยากทำให้หนูเสียใจเลย`,
+
+
+
+    `หนูไม่ต้องหายตอนนี้ก็ได้<br>
+    แต่ขออย่าหายไปไหนนะ`,
+
+
+
+    `พี่ขอคุยกับหนูดี ๆ อีกครั้งได้ไหม<br>
+    พี่ไม่อยากปล่อยให้เราจบวันด้วยการงอนกัน`,
+
+
+
+    `หนูยังโกรธพี่อยู่ก็ได้ พี่เข้าใจ<br>
+    แต่พี่ขออยู่ตรงนี้จนกว่าหนูจะโอเคนะ`,
+
+
+
+    `เอาจริง ๆ พี่ก็ไม่รู้ว่าหนูจะกดปุ่มนี้กี่รอบ<br>
+    แต่ถ้าหนูยังไม่หายงอน พี่ก็คงต้องง้อต่อไปแหละ<br>
+    พี่ไม่อยากให้หนูโกรธพี่จริง ๆ`,
+
+
+
+    `โอเค หนูไม่หายก็ได้ 😭<br>
+    แต่พี่จะบอกว่าพี่ขอโทษจริง ๆ นะ<br>
+    คราวนี้พี่พูดจริง ๆ ไม่ได้พูดเพื่อให้หนูหายงอนอย่างเดียว`,
+
+
+
+    `พี่รู้ว่าพี่พูดขอโทษไปหลายรอบแล้ว<br>
+    แต่ก็ยังอยากพูดอยู่ดีอะ<br>
+    ขอโทษนะหนู`,
+
+
+
+    `หนู...<br>
+    พี่ขอโทษจริง ๆ นะ<br>
+    หายงอนพี่เถอะนะคะ 🥺`
+
+];
+
+
+let noCount = 0;
+
+
+/* =========================
+   กด "ยังไม่หาย"
+========================= */
+
+function stillMad() {
+
+    noCount++;
+
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    const index =
+        Math.min(
+            noCount,
+            sorryMessages.length - 1
+        );
+
+
+    message.innerHTML =
+        sorryMessages[index];
+
+
+    const noButton =
+        document.getElementById(
+            "noButton"
+        );
+
+
+    const buttonTexts = [
+
+        "ยังไม่หาย 😾",
+
+        "ยังงอนอยู่",
+
+        "ยังไม่หายจริง ๆ",
+
+        "พี่ยังต้องง้ออีกเหรอ 🥺",
+
+        "ใจร้ายอะ",
+
+        "พี่ขอโทษแล้วนะ",
+
+        "ใจแข็งจัง",
+
+        "พี่ไม่รู้จะง้อยังไงแล้ว",
+
+        "ขอร้อง",
+
+        "หายงอนเถอะนะ",
+
+        "พี่ยอมแล้ว 😭"
+
+    ];
+
+
+    noButton.innerText =
+
+        buttonTexts[
+            Math.min(
+                noCount,
+                buttonTexts.length - 1
+            )
+        ];
+
+}
+
+
+/* =========================
+   กด "หายงอนแล้ว"
+========================= */
+
+function forgive() {
+
+    document.getElementById(
+        "questionPage"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "successPage"
+    ).style.display =
+        "block";
+
+
+    createHearts();
+
+}
+
+
+/* =========================
+   สร้างหัวใจ
+========================= */
+
+function createHearts() {
+
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "heart";
+
+
+        heart.innerText =
+
+            [
+                "💗",
+                "💖",
+                "💕",
+                "🌼",
+                "✨"
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+
+        heart.style.left =
+
+            Math.random() *
+            100 +
+            "vw";
+
+
+        heart.style.animationDelay =
+
+            Math.random() *
+            2 +
+            "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            () => {
+                heart.remove();
+            },
+            6000
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
